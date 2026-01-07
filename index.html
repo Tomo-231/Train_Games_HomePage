@@ -7,6 +7,25 @@
                 font-family: sans-serif;
                 font-size: 1rem;
             }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                border: 1px solid #999;
+                padding: 6px 8px;
+                text-align: center;
+                font-size: 14px;
+            }
+            th {
+                background-color: #f0f0f0;
+            }
+            .snow {
+            background-color: #e6f2ff;
+            }
+            .rain {
+                background-color: #e6ffe6;
+            }
         </style>
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -17,11 +36,26 @@
             <h2>目次</h2>
             <ul>
                 <li><a href="#about">1. 概要</a></li>
-                <li><a href="#rule">2. ルール</a></li>
-                <li><a href="#url">3. リンク、その他の情報</a></li>
+                <li><a href="#weather">2. 天気</a></li>
+                <li><a href="#rule">3. ルール</a></li>
+                <li><a href="#url">4. リンク、その他の情報</a></li>
             </ul>
             <h2 id="about">概要</h2>
             <strong>1/12(月)9:00品川駅高輪口改札外集合</strong>
+            <h2 id="weather">当日（1/12）の東京駅の天気　一時間毎</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>時刻</th>
+                        <th>気温 (℃)</th>
+                        <th>天気</th>
+                        <th>雨量 (mm)</th>
+                        <th>降雪 (cm)</th>
+                        <th>降水確率 (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="weatherBody"></tbody>
+            </table>
 
             <h2 id="rule">ルール</h2>
             <div style="
@@ -68,5 +102,6 @@
             <a>不明な点があれば、LINEで聞きましょう</a><br>
             <small>&copy; 2026 Tomo-231.(ルールを除く)</small>
             <script src="app.js"></script>
+            <script src="weather.js"></script>
         </body>
 </html>
